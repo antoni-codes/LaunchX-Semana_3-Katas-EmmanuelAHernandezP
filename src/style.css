@@ -1,0 +1,711 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:       Vaccination - Launch X Kata Semana 3
+
+Author:         Emmanuel Hernández
+WebSite:        www.jeemdev.com
+Default Color:  #FFF;
+Text Color:     #1f3e72;
+Version:        1.0
+main-font:      'Barlow', sans-serif;
+secondary-font:  monospace;
+Headers:        'New Wave Aztec', serif;
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+A. Global
+    1. Root
+    2. Global Styles
+    3. Global Buttons
+    4. Global Headlines
+
+B. HTML Elements Styling
+    1. HTML tags, Body, Section, more...
+    2. a href links
+    3. Headers
+
+C. Classes & IDs
+    1. Container
+    2. Nav
+    3. Buttons
+    9. Footer
+
+D. Forms
+
+E. Media Queries
+
+F. Animations
+-------------------------------------------------------------------*/
+/*=============================================
+=         START SECTION | A. Global           =
+=============================================*/
+
+/*----------  START SUBSECTION | ROOT   ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600&family=Source+Sans+Pro:wght@200;400;600;700;900&display=swap');
+
+:root {
+    --text_color-title   : #1f3e72;
+    --text_color-p       : #798aa5;
+    --text_family--title : 'Hindi Siliguri', sans-serif;
+    --text_family--p     : 'Source Sans Pro', sans-serif;
+    --text_size-p        : 1.6rem;
+    --text_width-p       : 600;
+    --btn_color-primary  : #3757d5;
+    --btn_color-secondary: #f1f5ff;
+    --icon_color-shadow  : #3757d557;
+
+}
+
+/*----------  END SUBSECTION | ROOT   ----------*/
+
+/*----------  START SUBSECTION | Global Styles   ----------*/
+* {
+
+    margin            : 0;
+    padding           : 0;
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+    outline           : none;
+    border            : none;
+    text-decoration   : none;
+    -webkit-transition: .2s linear;
+    transition        : .2s linear;
+}
+
+html {
+    font-size         : 62.5%;
+    overflow-x        : hidden;
+    scroll-behavior   : smooth;
+    scroll-padding-top: 5rem;
+    font-family       : var(--text_family--p);
+}
+
+html::-webkit-scroolbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #1f3e72;
+}
+
+img {
+    max-width: 100%;
+    width    : 100%;
+}
+
+h1 {
+    font-family: var(--text_family--title);
+    font-size  : 4.9rem;
+    font-weight: 800;
+    line-height: 1.2em;
+    color      : var(--text_color-title)
+}
+
+h2 {
+    font-family  : var(--text_family--title);
+    font-size    : 45px;
+    font-weight  : 800;
+    line-height  : 1.2em;
+    color        : var(--text_color-title);
+    margin-bottom: 4.2rem;
+}
+
+h3 {
+    font-family  : var(--text_family--p);
+    font-size    : 27px;
+    font-weight  : 600;
+    line-height  : 1em;
+    color        : var(--text_color-title);
+    margin-bottom: 2rem;
+}
+
+p {
+    font-family: var(--text_family--p);
+    font-size  : 20px;
+    font-weight: 600;
+    color      : var(--text_color-p);
+    line-height: 3.5rem;
+}
+
+/*----------  END SUBSECTION | Global Styles   ----------*/
+
+/*----------  START SUBSECTION | Global Buttons   ----------*/
+.btn {
+    padding      : 1.3rem 3rem;
+    border-radius: 5px;
+    font-family  : var(--text_family--p);
+    font-size    : 1.8rem;
+    font-weight  : 600;
+    cursor       : pointer;
+}
+
+.btn__primary {
+    background-color: var(--btn_color-primary);
+    color           : #FFF;
+    box-shadow      : 0 10px 20px 0 #1f3d724f;
+    border          : 2px solid var(--btn_color-primary);
+}
+
+.btn__primary:hover {
+    transform: scale(1.08);
+    border   : 2px solid #fff;
+    font-size: 1.8rem;
+}
+
+/*----------  END SUBSECTION | Global Buttons   ----------*/
+
+/*----------  START SUBSECTION | Global Icons   ----------*/
+.icon__primary {
+    font-size       : 15px;
+    color           : var(--btn_color-primary);
+    background-color: #e6ecff;
+    border-radius   : 7px;
+    width           : 25px;
+    height          : 25px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.icon__secondary {
+    font-size       : 15px;
+    color           : #ffd012;
+    background-color: #fffae7;
+    border-radius   : 4px;
+    width           : 25px;
+    height          : 25px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+
+/*----------  END SUBSECTION | Global Icons   ----------*/
+
+/*============ FOOTER SECTION |  A. Global  =========*/
+
+/*=============================================
+=   START SECTION |B. HTML Elements Styling     =
+=============================================*/
+
+section {
+    padding: 5rem 10%;
+}
+
+header {
+    padding        : 3rem 0;
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: space-around;
+}
+
+/*=====  END OF SECTION HTML B. Elements Styling  ======*/
+
+/*=============================================
+=       START SECTION | C. Classes & IDs      =
+=============================================*/
+
+/*----------  START SUBSECTION | Header   ----------*/
+.header__section {
+    width: 100%;
+}
+
+.bg-shape {
+    width           : 50%;
+    height          : 125px;
+    background-color: #e6f4fc;
+    position        : absolute;
+    top             : 0;
+    right           : 0;
+    z-index         : -1;
+}
+
+.header__logo img {
+    max-width: 60%;
+    width    : 60%;
+    cursor   : pointer;
+}
+
+.header__right {
+    display: inline-flex;
+}
+
+.header__nav {
+    margin-right: 7.8rem;
+    display     : inline-flex;
+}
+
+.header__nav ul {
+    display    : inline-flex;
+    align-items: center;
+    list-style : none;
+}
+
+.header__nav ul li {
+
+    margin-right: 6rem;
+    font-size   : 1.8rem;
+    font-weight : 700;
+    font-family: var(--text_family--p);
+    color       : var(--text_color-p);
+    cursor      : pointer;
+}
+
+.header__nav ul li:hover {
+    color: var(--text_color-title);
+}
+
+/*----------  END SUBSECTION | Header   ----------*/
+
+/*----------  START SUBSECTION | Hero   ----------*/
+section.hero__section {
+    height       : 100vh;
+    padding      : 0 0;
+    display      : flex;
+    margin-bottom: 9rem
+}
+
+.hero__section .wrapper__container {
+    width: 50%;
+}
+
+.hero__content {
+    padding: 11rem 16rem 0 14.1rem;
+}
+
+.hero__content .title {
+    margin-bottom: 2rem;
+}
+
+.hero__content p {
+    margin-bottom: 1.5rem;
+    padding-right: 1rem;
+}
+
+.hero__feature {
+    display      : inline-flex;
+    margin-bottom: 20rem;
+}
+
+.hero__feature--data {
+    display        : flex;
+    padding        : 3rem 2rem;
+    justify-content: space-between;
+}
+
+.hero__feature--data .hero__feature--icon {
+    margin-right: 1.5rem;
+}
+
+.hero__feature--data .hero__feature--text {
+    display    : inherit;
+    align-items: center;
+    font-size  : 18px;
+    font-weight: 600;
+    color      : var(--text_color-title);
+}
+
+.schedule__title {
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 3rem;
+}
+
+.schedule__title .icon__primary {
+    margin-right: 1.5rem;
+    box-shadow  : 0 4px 7px 0 var(--icon_color-shadow);
+    border      : 1px solid #fff;
+}
+
+.schedule__title .schedule__text {
+    font-size  : 25px;
+    font-weight: 600;
+    color      : var(--text_color-title);
+}
+
+
+.schedule__info {
+    margin-bottom   : 120rem;
+    display         : flex;
+    z-index         : 9;
+    position        : absolute;
+    width           : 62%;
+    padding         : 3.5rem 4rem;
+    box-shadow      : 0 10px 40px 0 #3757d52a;
+    background-color: #fafcfef1;
+    border          : 5px solid #fff;
+    border-radius   : 10px;
+}
+
+.schedule__info .schedule__info--container {
+    display: inherit;
+
+}
+
+.schedule__info .schedule__info--container .icon__primary {
+    margin-right: 1.5rem;
+}
+
+.schedule__info--wrapper {
+    margin-right: 2.6rem;
+
+}
+
+.schedule__info--wrapper .schedule__info--title {
+    font-size    : 24px;
+    font-weight  : 600;
+    color        : var(--text_color-p);
+    margin-bottom: .5rem;
+}
+
+.schedule__info--wrapper .schedule__info--descri {
+    font-size  : 26px;
+    font-weight: 700;
+    color      : var(--text_color-title);
+    width      : 15rem;
+    cursor     : pointer;
+}
+
+.schedule__info .btn {
+    font-weight: 600;
+    padding    : 1rem 5rem;
+}
+
+.hero__image {
+    background     : url(../assets/img/hero.png);
+    background-size: cover;
+    width          : 50%;
+    height         : 119vh !important;
+}
+
+/*----------  END SUBSECTION | Hero   ----------*/
+
+/*----------  START SUBSECTION | Clinics Banner   ----------*/
+section.clinics__banner {
+    padding: 8rem 10% 0 10%;
+}
+
+/*----------  END SUBSECTION | Clinics Banner   ----------*/
+/*----------  START SUBSECTION | Why ----------*/
+section.why__section {
+    margin-bottom: 12rem;
+}
+
+.why__section .heading {
+    width: 50%;
+}
+
+.why__section .why__heading {
+    margin-bottom: 9.5rem;
+    padding-right: 7rem;
+}
+
+.why__benefits--container {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.why__benefits--info {
+    border       : 5px solid #fafaff;
+    border-radius: 10px;
+    max-width    : 28rem;
+    padding      : 2rem 2rem 5rem 2rem;
+    cursor       : pointer;
+}
+
+.why__benefits--info:hover {
+    box-shadow      : 0 15px 15px 0 #3757d51e;
+    background-color: #f7fafe;
+}
+
+.why__benefits--info .icon__primary {
+    border: 0px solid #fff;
+}
+
+.why__benefits--info:hover .icon__primary {
+    border    : 3px solid #fff;
+    box-shadow: 0 7px 20px 0 #3757d51e;
+}
+
+.why__benefits--info .icon__primary {
+    margin-bottom: 3.5rem;
+    font-size    : 28px;
+    width        : 55px;
+    height       : 55px;
+}
+
+.why__benefits--info .why__benefits--title {
+    padding-right: 3rem;
+    max-width    : 22rem;
+}
+
+.why__benefits--info .why__benefits--title.why__title--margin {
+    padding-right: 5rem;
+}
+
+.why__benefits--info .why__benefits--description p {
+    font-size  : 18px;
+    line-height: 1.6em;
+    max-width  : 20rem;
+}
+
+/*----------  END SUBSECTION | Why ----------*/
+
+/*----------  START SUBSECTION | Preparations   ----------*/
+section.prep__section {
+    display      : flex;
+    padding      : 0;
+    margin-bottom: 5rem;
+}
+
+.prep__image--wrapper {
+    background       : url(../assets/img/preparations.png);
+    background-repeat: no-repeat;
+    background-size  : auto;
+    width            : 50%;
+    height           : 100vh;
+}
+
+.prep__content--wrapper {
+    width        : 50%;
+    padding-right: 10%;
+}
+
+.prep__content--wrapper .prep__content--description {
+    margin-bottom: 7rem;
+    max-width    : 87%;
+}
+
+.prep__list--content {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    margin-bottom  : 4rem;
+    cursor         : pointer;
+}
+
+.prep__list--data {
+    display     : inherit;
+    align-items : center;
+    padding-left: 1rem;
+}
+
+.prep__list--content .icon__primary {
+    margin-right: 2rem;
+}
+
+.prep__list--content .prep__list--title p {
+    color: var(--text_color-title);
+}
+
+.prep__list--content .prep__list--icon_close.icon__primary {
+    font-size   : 15px;
+    width       : 20px;
+    height      : 20px;
+    margin-right: 22rem;
+}
+
+.prep__list--content .prep__list--data.open {
+    align-items     : baseline;
+    max-width       : 38rem;
+    width           : 38rem;
+    box-shadow      : 0 15px 15px 0 #3757d51e;
+    background-color: #f9fbfe;
+    padding-top     : 1rem;
+    padding-left    : 1rem;
+}
+
+.prep__list--content .prep__list--data.open .icon__primary {
+    width     : 40px;
+    border    : 1px solid #fff;
+    box-shadow: 0 12px 15px 0 #3757d53a;
+}
+
+.prep__list--content .prep__list--icon_open {
+    box-shadow: 0 -6px 15px 0 #3757d531 !important;
+    height    : 20px;
+    color     : #727272;
+    font-size : 15px;
+    transform : rotate(180deg);
+    width     : 35px !important;
+    height    : 25px !important;
+}
+
+
+.prep__list--data__open p.prep_list--description {
+    font-size  : 14px;
+    line-height: 1.6em;
+    color      : #8b97aa;
+    padding    : 1rem 5rem 3rem 0;
+}
+
+.prep__list--data__open .prep__list--icon_open.icon__primary i {
+    width: 100px !important;
+}
+
+/*----------  END SUBSECTION | Preparations   ----------*/
+/*----------  START SUBSECTION | Contact   ----------*/
+section.contact__container {
+    padding: 5rem 0;
+    display: flex;
+
+}
+
+.contact__content--wrapper {
+    width      : 50%;
+    margin-left: 10%;
+}
+
+.contact__content--wrapper .contact__content--description {
+    width        : 87%;
+    margin-bottom: 7rem;
+}
+
+.contact__comm--wrapper {
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact__comm--info {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    padding        : 0 10rem 0 3rem;
+    margin-bottom  : 10rem;
+    width          : 22rem;
+    padding        : 3.4rem 0;
+}
+
+.contact__comm--info:hover {
+    box-shadow      : 0 15px 15px 0 #3757d51e;
+    background-color: #f9fbfe;
+}
+
+.contact__comm--info:hover .btn.btn__primary.contact__comm--btn {
+    transform       : scale(1);
+    background-color: var(--btn_color-primary);
+    color           : #FFF;
+    box-shadow      : 0 10px 20px 0 #1f3d724f;
+}
+
+.contact__comm--info:hover .icon__primary {
+    border    : 1px solid #fff;
+    box-shadow: 0 12px 15px 0 #3757d53a;
+}
+
+.contact__comm--data {
+    display      : inline-flex;
+    margin-bottom: 3rem;
+}
+
+.contact__comm--data .icon__primary {
+    margin-right: 2rem;
+    font-size   : 25px;
+    width       : 50px;
+    height      : 50px;
+    border      : 0px solid rgb(255, 255, 255);
+}
+
+.contact__comm--data .contact__comm--descr h3 {
+    margin-bottom: 0rem;
+    font-size    : 24px;
+}
+
+.contact__comm--data .contact__comm--descr p {
+    font-size: 16px;
+}
+
+.contact__comm--info .btn.btn__primary.contact__comm--btn {
+    background-color: #f1f5ff;
+    border          : none;
+    color           : var(--btn_color-primary);
+    box-shadow      : none;
+    width           : 18rem;
+    font-size       : 18px;
+}
+
+.contact__image--wrapper {
+    width            : 50%;
+    height           : 100vh;
+    background       : url(../assets/img/contact.png);
+    background-repeat: no-repeat;
+    background-size  : auto;
+    padding-left     : 40%;
+}
+/*----------  END SUBSECTION | CONTACT   ----------*/
+/*----------  START SUBSECTION | FOOTER   ----------*/
+footer {
+    background-color : #eef3ff;
+}
+
+.footer__section {
+    padding: 4rem 10%;
+    display: flex;
+    justify-content : space-between;
+    margin-bottom: 4rem;
+}
+
+.footer__about{
+    max-width: 20rem;
+}
+
+.footer__about img{
+    max-width: 80%;
+    margin-bottom: 1.4rem;
+}
+
+.footer__about p{
+    line-height: 1.5em;
+    font-weight: 600;
+}
+
+.footer__links {
+    display: flex;
+}
+
+.footer__links .footer__links--wrapper {
+    margin-right: 8rem;
+}
+
+.footer__links .footer__links--wrapper h3{
+    font-weight: 700;
+}
+
+.footer__links .footer__links--wrapper ul {
+    list-style: none;
+}
+
+.footer__links .footer__links--wrapper li {
+    font-family: var(--text_family--p);
+    font-size  : 18px;
+    font-weight: 600;
+    color      : var(--text_color-p);
+    line-height: 4rem;
+}
+
+
+.footer__copy {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+
+.footer__copy .footer__copy--legal {
+    display: inherit;
+}
+
+.footer__copy .footer__copy--legal p {
+    margin-right: 2rem;
+}
+/*----------  END SUBSECTION | FOOTER   ----------*/
+/*=====  END OF SECTION C. Classes & IDs  ======*/
