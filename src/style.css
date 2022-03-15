@@ -121,7 +121,7 @@ h2 {
 
 h3 {
     font-family  : var(--text_family--p);
-    font-size    : 27px;
+    font-size    : 26px;
     font-weight  : 600;
     line-height  : 1em;
     color        : var(--text_color-title);
@@ -278,6 +278,26 @@ section.hero__section {
     width: 50%;
 }
 
+.shape {
+    position: absolute;
+    z-index : -10
+}
+
+.shape-1 {
+    max-width  : 13%;
+    margin-left: 5rem;
+}
+
+.shape-2 {
+    max-width: 9%;
+    right    : 50%;
+}
+
+.shape-3 {
+    max-width: 9%;
+    right    : 0;
+}
+
 .hero__content {
     padding: 11rem 16rem 0 14.1rem;
 }
@@ -368,7 +388,7 @@ section.hero__section {
 }
 
 .schedule__info--wrapper .schedule__info--descri {
-    font-size  : 26px;
+    font-size  : 23px;
     font-weight: 700;
     color      : var(--text_color-title);
     width      : 15rem;
@@ -453,9 +473,9 @@ section.why__section {
 }
 
 .why__benefits--info .why__benefits--description p {
-    font-size  : 18px;
+    font-size  : 17px;
     line-height: 1.6em;
-    max-width  : 20rem;
+    max-width  : 22rem;
 }
 
 /*----------  END SUBSECTION | Why ----------*/
@@ -692,6 +712,7 @@ footer {
     font-weight: 600;
     color      : var(--text_color-p);
     line-height: 4rem;
+    cursor     : pointer;
 }
 
 
@@ -707,6 +728,7 @@ footer {
 
 .footer__copy .footer__copy--legal p {
     margin-right: 2rem;
+    cursor      : pointer;
 }
 
 /*----------  END SUBSECTION | FOOTER   ----------*/
