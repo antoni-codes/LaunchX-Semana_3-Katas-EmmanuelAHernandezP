@@ -577,7 +577,7 @@ section.prep__section {
 section.contact__container {
     padding: 5rem 0;
     display: flex;
-
+    position: relative;
 }
 
 .contact__content--wrapper {
@@ -656,11 +656,14 @@ section.contact__container {
 
 .contact__image--wrapper {
     width            : 50%;
-    height           : 100vh;
+    height           : 130vh;
     background       : url(../assets/img/contact.png);
     background-repeat: no-repeat;
     background-size  : auto;
     padding-left     : 40%;
+    position: absolute;
+    right: -17rem;
+    top: 0;
 }
 
 /*----------  END SUBSECTION | CONTACT   ----------*/
