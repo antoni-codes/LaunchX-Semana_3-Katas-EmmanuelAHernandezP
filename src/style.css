@@ -3,45 +3,43 @@
 
 Project:       Vaccination - Launch X Kata Semana 3
 
-Author:         Emmanuel Hernández
-WebSite:        www.jeemdev.com
-Default Color:  #FFF;
-Text Color:     #1f3e72;
-Version:        1.0
-main-font:      'Barlow', sans-serif;
-secondary-font:  monospace;
-Headers:        'New Wave Aztec', serif;
+Author:          Emmanuel Hernández
+Website:         www.jeemdev.com
+Primary Color:   #1f3e72;
+Secondary Color: #798aa5;
+Version:         1.0
+main-font:       'Source Sans Pro', sans-serif
+secondary-font:  none
+Headers:         'Hindi Siliguri', sans-serif
 
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
 [Table of contents]
 
-A. Global
-    1. Root
-    2. Global Styles
-    3. Global Buttons
-    4. Global Headlines
+A. GLOBAL
+    1. ROOT
+    2. GLOBAL STYLES
+    3. GLOBAL BUTTONS
+    4. GLOBAL ICONS
 
-B. HTML Elements Styling
-    1. HTML tags, Body, Section, more...
-    2. a href links
-    3. Headers
+B. HTML ELEMENTS STYLING
+    1. SECTION
+    3. HEADER
 
-C. Classes & IDs
-    1. Container
-    2. Nav
-    3. Buttons
-    9. Footer
-
-D. Forms
-
-E. Media Queries
-
-F. Animations
+C. SECTIONS (CUSTOM CLASSES & IDs)
+    1. Header
+    2. Hero
+    3. Clinics Banner
+    4. Why
+    5. Preparations
+    6. Contact
+    7. Footer
 -------------------------------------------------------------------*/
+
+
 /*=============================================
-=         START SECTION | A. Global           =
+=         START SECTION | A. GLOBAL           =
 =============================================*/
 
 /*----------  START SUBSECTION | ROOT   ----------*/
@@ -58,12 +56,11 @@ F. Animations
     --btn_color-primary  : #3757d5;
     --btn_color-secondary: #f1f5ff;
     --icon_color-shadow  : #3757d557;
-
 }
 
 /*----------  END SUBSECTION | ROOT   ----------*/
 
-/*----------  START SUBSECTION | Global Styles   ----------*/
+/*----------  START SUBSECTION | GLOBAL STYLES   ----------*/
 * {
 
     margin            : 0;
@@ -136,9 +133,9 @@ p {
     line-height: 3.5rem;
 }
 
-/*----------  END SUBSECTION | Global Styles   ----------*/
+/*----------  END SUBSECTION | GLOBAL STYLES   ----------*/
 
-/*----------  START SUBSECTION | Global Buttons   ----------*/
+/*----------  START SUBSECTION | GLOBAL BUTTONS   ----------*/
 .btn {
     padding      : 1.3rem 3rem;
     border-radius: 5px;
@@ -161,9 +158,9 @@ p {
     font-size: 1.8rem;
 }
 
-/*----------  END SUBSECTION | Global Buttons   ----------*/
+/*----------  END SUBSECTION | GLOBAL BUTTONS   ----------*/
 
-/*----------  START SUBSECTION | Global Icons   ----------*/
+/*----------  START SUBSECTION | GLOBAL ICONS   ----------*/
 .icon__primary {
     font-size       : 15px;
     color           : var(--btn_color-primary);
@@ -188,13 +185,13 @@ p {
     align-items     : center;
 }
 
-
-/*----------  END SUBSECTION | Global Icons   ----------*/
-
+/*----------  END SUBSECTION | GLOBAL ICONS   ----------*/
 /*============ FOOTER SECTION |  A. Global  =========*/
 
+
+
 /*=============================================
-=   START SECTION |B. HTML Elements Styling     =
+=   START SECTION | B. HTML ELEMENTS STYLING     =
 =============================================*/
 
 section {
@@ -208,10 +205,10 @@ header {
     justify-content: space-around;
 }
 
-/*=====  END OF SECTION HTML B. Elements Styling  ======*/
+/*=====  END OF SECTION HTML B. ELEMENTS STYLING  ======*/
 
 /*=============================================
-=       START SECTION | C. Classes & IDs      =
+=       START SECTION | C. SECTIONS (CUSTOM CLASSES & IDs)      =
 =============================================*/
 
 /*----------  START SUBSECTION | Header   ----------*/
@@ -415,6 +412,7 @@ section.clinics__banner {
 }
 
 /*----------  END SUBSECTION | Clinics Banner   ----------*/
+
 /*----------  START SUBSECTION | Why ----------*/
 section.why__section {
     margin-bottom: 12rem;
@@ -560,7 +558,6 @@ section.prep__section {
     height    : 25px !important;
 }
 
-
 .prep__list--data__open p.prep_list--description {
     font-size  : 14px;
     line-height: 1.6em;
@@ -573,10 +570,11 @@ section.prep__section {
 }
 
 /*----------  END SUBSECTION | Preparations   ----------*/
+
 /*----------  START SUBSECTION | Contact   ----------*/
 section.contact__container {
-    padding: 5rem 0;
-    display: flex;
+    padding : 5rem 0;
+    display : flex;
     position: relative;
 }
 
@@ -661,12 +659,13 @@ section.contact__container {
     background-repeat: no-repeat;
     background-size  : auto;
     padding-left     : 40%;
-    position: absolute;
-    right: -17rem;
-    top: 0;
+    position         : absolute;
+    right            : -17rem;
+    top              : 0;
 }
 
 /*----------  END SUBSECTION | CONTACT   ----------*/
+
 /*----------  START SUBSECTION | FOOTER   ----------*/
 footer {
     background-color: #eef3ff;
@@ -718,7 +717,6 @@ footer {
     cursor     : pointer;
 }
 
-
 .footer__copy {
     display        : flex;
     justify-content: space-between;
@@ -735,4 +733,4 @@ footer {
 }
 
 /*----------  END SUBSECTION | FOOTER   ----------*/
-/*=====  END OF SECTION C. Classes & IDs  ======*/
+/*=====  END OF SECTION C. SECTIONS (CUSTOM CLASSES & IDs)  ======*/
