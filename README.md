@@ -1,9 +1,3 @@
-# LaunchX-Semana_3-Katas-EmmanuelAHernandezP
-
-
-DEVELOPMENT | REPLICA DE DISEÑO A DESARROLLO CON HTML, CSS & JAVASCRIPT | RESPONSIVE
-
-
 # 👨🏻‍🎓 Katas Semana 3 | Desarrollo Frontend | Misión Front-end | LaunchX
 
 📖 Descripción: Desarrollo de one page, con CSS, replicando un Diseño UI
@@ -14,7 +8,7 @@ DEVELOPMENT | REPLICA DE DISEÑO A DESARROLLO CON HTML, CSS & JAVASCRIPT | RESPO
 
 ## Links
 
-🌐- Live Site URL: [Live Site](https://antoni-codes.github.io/LaunchX-Semana3LaunchX-Semana2-Katas-EmmanuelAHernandezP)
+🌐- Live Site URL: [Live Site](https://antoni-codes.github.io/LaunchX-Semana_3-Katas-EmmanuelAHernandezP/)
 
 
 ## Captura | Escritorio
